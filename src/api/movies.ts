@@ -13,10 +13,6 @@ export interface Movie {
   created_at?: string;
 }
 
-export interface MovieDetail extends Movie {
-  created_by: number;
-  recent_ratings: Rating[];
-}
 
 export interface Rating {
   id: number;
@@ -28,6 +24,10 @@ export interface Rating {
   review: string | null;
   created_at: string;
   updated_at: string;
+}
+export interface MovieDetail extends Movie {
+  created_by: number;
+  recent_ratings: Rating[];
 }
 
 export interface RatingData {

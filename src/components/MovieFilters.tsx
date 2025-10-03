@@ -1,31 +1,5 @@
-// components/MovieFilters.tsx
 import React from 'react';
 
-
-interface Rating {
-  id: number;
-  movie: number;
-  movie_title: string;
-  user: number;
-  user_username: string;
-  rating: number;
-  review: string | null;
-  created_at: string;
-  updated_at: string;
-}
-
-
-interface Movie {
-  id: number;
-  title: string;
-  genre: string;
-  release_year: number;
-  description: string;
-  ratings_count: number;
-  ratings_avg: number;
-  created_by_username: string;
-  created_at: string;
-}
 
 interface SearchFilters {
   genre?: string;

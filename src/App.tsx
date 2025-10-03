@@ -7,7 +7,8 @@ import { RegisterPage } from './pages/RegisterPage';
 import HomePage from './pages/HomePage';
 import AddMoviePage from './pages/AddMoviePage';
 
-function ProtectedRoute({ children }: { children: JSX.Element }) {
+
+function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user } = useAuth();
   return user ? children : <Navigate to="/login" replace />;
 }

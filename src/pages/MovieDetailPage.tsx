@@ -6,12 +6,13 @@ import { useAuth } from "../context/AuthProvider";
 import { RatingStars } from "../components/RatingStars";
 import { Link } from "react-router-dom";
 
+
 interface Rating {
   id: number;
   user: number;
-  username?: string; 
+  username?: string;
   rating: number;
-  review?: string;
+  review?: string | null;
   created_at: string;
 }
 
@@ -43,10 +44,27 @@ export const MovieDetailPage: React.FC = () => {
     }
   };
 
+  // const fetchRatings = async () => {
+  //   try {
+  //     const data = await getMovieRatings(Number(id));
+  //     setRatings(data);
+  //   } catch (err) {
+  //     console.error("Failed to fetch ratings", err);
+  //   }
+  // };
   const fetchRatings = async () => {
     try {
       const data = await getMovieRatings(Number(id));
-      setRatings(data);
+      setRatings(
+        data.map((r: any): Rating => ({
+          id: r.id,
+          user: r.user,
+          username: r.username ?? "Unknown",
+          rating: r.rating,
+          review: r.review ?? undefined, 
+          created_at: r.created_at,
+        }))
+      );
     } catch (err) {
       console.error("Failed to fetch ratings", err);
     }
