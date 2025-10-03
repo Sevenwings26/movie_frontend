@@ -1,52 +1,12 @@
 // components/RatingForm.tsx
 import React, { useState } from 'react';
 import { RatingStars } from './RatingStars';
-// import { RatingData } from '../types/movies';
 import { useAuth } from '../context/AuthProvider';
 
-
-interface Movie {
-  id: number;
-  title: string;
-  genre: string;
-  release_year: number;
-  description: string;
-  ratings_count: number;
-  ratings_avg: number;
-  created_by_username: string;
-  created_at: string;
-}
-
-interface Rating {
-  id: number;
-  movie: number;
-  movie_title: string;
-  user: number;
-  user_username: string;
-  rating: number;
-  review: string | null;
-  created_at: string;
-  updated_at: string;
-}
-
-interface MovieDetail extends Movie {
-  recent_ratings: Rating[];
-  description: string;
-}
 
 interface RatingData {
   rating: number;
   review?: string;
-}
-
-interface RatingResponse {
-  rating: Rating;
-  movie: {
-    id: number;
-    title: string;
-    ratings_count: number;
-    ratings_avg: number;
-  };
 }
 
 

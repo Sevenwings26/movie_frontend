@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthProvider';
-import { FaFilm, FaSearch, FaPlus, FaUser, FaSignOutAlt, FaBars, FaTimes } from 'react-icons/fa';
+import { FaFilm, FaPlus, FaSignOutAlt, FaBars, FaTimes } from 'react-icons/fa';
 
 
 const NavBar: React.FC = () => {

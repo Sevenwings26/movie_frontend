@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 
 interface Rating {
   id: number;
-  user: string;
+  user: number;
+  username?: string; 
   rating: number;
   review?: string;
   created_at: string;

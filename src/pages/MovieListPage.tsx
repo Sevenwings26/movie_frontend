@@ -8,7 +8,7 @@ import {listMovies} from '../api/movies'
 
 
 interface Movie {
-  id: number;
+  id?: number;
   title: string;
   genre: string;
   release_year: number;
@@ -18,6 +18,7 @@ interface Movie {
   created_by_username: string;
   created_at: string;
 }
+
 
 interface SearchFilters {
   genre?: string;
