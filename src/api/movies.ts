@@ -1,4 +1,3 @@
-// src/api/movies.ts - Enhanced version
 import AxiosInstance from "./AxiosInstance";
 
 export interface Movie {

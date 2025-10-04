@@ -1,4 +1,3 @@
-// components/FormInput.tsx
 import React from 'react';
 
 interface FormInputProps {

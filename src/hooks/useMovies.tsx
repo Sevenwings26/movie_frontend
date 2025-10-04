@@ -1,6 +1,5 @@
 import { useCallback, useState } from "react";
-import AxiosInstance from "api/AxiosInstance";
-
+import AxiosInstance from "../api/AxiosInstance"
 
 
 export interface Movie {

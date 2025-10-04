@@ -48,7 +48,7 @@ AxiosInstance.interceptors.response.use(
           error.config.headers["Authorization"] = `Bearer ${res.data.access}`;
           return AxiosInstance(error.config);
         } catch (err) {
-          // If refresh also fails → clear storage
+          // clear storage
           localStorage.removeItem("access");
           localStorage.removeItem("refresh");
         }
